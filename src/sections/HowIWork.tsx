@@ -3,27 +3,33 @@ import { Card, H2, Lead, Row, Section } from "./_ui";
 export default function HowIWork() {
   return (
     <Section tone="soft">
-      <H2>How I work</H2>
+      <H2>Jak pracuję</H2>
+
       <Lead>
-        My sessions are structured, supportive, and practical. We focus on what you need most, and we track progress
-        so you feel real changes — not just a “good workout.”
+        Sesje są spokojne, uporządkowane i nastawione na realną poprawę samopoczucia.
+        Skupiamy się na tym, co najbardziej potrzebne Twojemu ciału — tak, aby efekty
+        były odczuwalne nie tylko na treningu, ale też w codziennym życiu czy aktywności sportowej.
       </Lead>
 
       <Row>
-        <Card title="1) Assess & prioritize" icon="🎯">
-          We identify what’s driving discomfort or limitation (posture, control, mobility, strength) and choose a clear focus.
+        <Card title="1) Ocena i priorytety" icon="🎯">
+          Sprawdzamy, co stoi za bólem, napięciem lub ograniczeniami
+          (postawa, zakres ruchu, kontrola, siła) i wybieramy jasny kierunek pracy.
         </Card>
 
-        <Card title="2) Train with intention" icon="🧩">
-          Pilates fundamentals, breath + control, progressive loading — adapted to your body and your goals.
+        <Card title="2) Trening z intencją" icon="🧩">
+          Fundamenty Pilatesu, oddech, kontrola i stopniowe wzmacnianie —
+          zawsze dopasowane do Twojego ciała, poziomu i celu.
         </Card>
 
-        <Card title="3) Build a simple plan" icon="🗺️">
-          You’ll know what we’re doing and why. Optional short “between-session” routines if you want extra momentum.
+        <Card title="3) Prosty i zrozumiały plan" icon="🗺️">
+          Wiesz, co robimy i dlaczego. Jeśli chcesz, dostajesz krótkie,
+          proste ćwiczenia do wykonania między sesjami.
         </Card>
 
-        <Card title="4) Progress you can feel" icon="📈">
-          Less stiffness, better posture, stronger core support, smoother movement — measured by how you function day to day.
+        <Card title="4) Efekty, które czujesz" icon="📈">
+          Mniej bólu i sztywności, lepsza postawa, większa siła i sprawność —
+          oceniane przez to, jak poruszasz się i funkcjonujesz na co dzień.
         </Card>
       </Row>
     </Section>

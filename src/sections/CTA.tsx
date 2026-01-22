@@ -7,25 +7,26 @@ export default function CTA() {
 
   return (
     <Section id="contact" tone="soft">
-      <H2>Get in touch</H2>
+      <H2>Kontakt</H2>
 
       <Lead>
-        If you’re interested in private Pilates sessions in Warsaw — at your home, office,
-        or on a reformer downtown — feel free to reach out.
+        Jeśli interesują Cię indywidualne sesje Pilates w Warszawie —
+        w domu, w biurze lub na reformerze w studio —
+        zapraszam do kontaktu.
       </Lead>
 
       <Row>
-        <Card title="Contact details" icon="📍">
+        <Card title="Dane kontaktowe" icon="📍">
           <div style={{ lineHeight: 1.8 }}>
             <div>
-              <strong>Email:</strong>{" "}
+              <strong>E-mail:</strong>{" "}
               <a href={`mailto:${email}`} style={linkStyle}>
                 {email}
               </a>
             </div>
 
             <div style={{ marginTop: 6 }}>
-              <strong>WhatsApp (preferred):</strong>{" "}
+              <strong>WhatsApp (najlepiej):</strong>{" "}
               <a
                 href={whatsappLink}
                 target="_blank"
@@ -38,23 +39,24 @@ export default function CTA() {
 
             <div style={{ marginTop: 14 }}>
               <Muted>
-                WhatsApp is the fastest way to reach me. I’m often teaching sessions and
-                can’t take phone calls, but I always reply to messages as soon as I’m free.
+                WhatsApp to najszybsza forma kontaktu.
+                Często prowadzę zajęcia i nie zawsze mogę odebrać telefon,
+                ale na wiadomości odpowiadam możliwie najszybciej.
               </Muted>
             </div>
           </div>
         </Card>
 
-        <Card title="What to include in your message" icon="💬">
+        <Card title="Co warto napisać w wiadomości" icon="💬">
           <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.8 }}>
-            <li>Where you’d like to train (home, office, or reformer)</li>
-            <li>Your general availability</li>
-            <li>Any goals or concerns you’d like to work on</li>
+            <li>Gdzie chcesz trenować (dom, biuro, reformer)</li>
+            <li>Twoją ogólną dostępność</li>
+            <li>Cel treningu lub ewentualne dolegliwości / ograniczenia</li>
           </ul>
 
           <div style={{ marginTop: 14 }}>
             <ButtonLink href="#first-session" variant="accent">
-              See how the first session works
+              Zobacz, jak wygląda pierwsza sesja
             </ButtonLink>
           </div>
         </Card>
@@ -62,7 +64,8 @@ export default function CTA() {
 
       <div style={{ marginTop: 18 }}>
         <Muted>
-          I personally reply to all inquiries. Typical response time is within 24 hours.
+          Na wszystkie wiadomości odpowiadam osobiście.
+          Zwykle w ciągu 24 godzin.
         </Muted>
       </div>
     </Section>

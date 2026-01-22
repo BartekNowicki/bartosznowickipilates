@@ -11,28 +11,36 @@ export default function AboutMe() {
 
   return (
     <Section tone="light">
-      <H2>About me</H2>
+      <H2>O mnie</H2>
 
       <Lead>
-        I’m a certified Pilates instructor focused on quality of movement, biomechanics,
-        and a practical approach that improves how you feel in everyday life —
-        not just how you perform in a session.
+        Jestem certyfikowanym instruktorem Pilatesu. Pracuję w oparciu o biomechanikę,
+        jakość ruchu i spokojne, uważne podejście do ciała.
+        Moim celem jest realna ulga — zmniejszenie napięć, bólu i sztywności,
+        szczególnie tych wynikających z siedzącego trybu życia, stresu
+        lub jednostronnych obciążeń.
+        Jednocześnie pomagam budować stabilność i sprawność, które przekładają się
+        na lepszy ruch podczas codziennej aktywności oraz w sporcie.
       </Lead>
 
       <Row>
-        <Card title="Personalized coaching" icon="🤝">
-          I work 1:1, which means your session is built around your body, your history,
-          and your goals — every time.
+        <Card title="Indywidualna praca 1:1" icon="🤝">
+          Każda sesja jest dopasowana do Twojego ciała, historii urazów,
+          stylu życia i celów — niezależnie od tego, czy chcesz poczuć ulgę,
+          czy poprawić jakość ruchu w rywalizacjach sportowych.
         </Card>
 
-        <Card title="Clear and calm progression" icon="🧘">
-          We move step by step. My job is to make training feel safe, understandable,
-          and sustainable.
+        <Card title="Bezpieczna i logiczna progresja" icon="🧘">
+          Pracujemy krok po kroku, bez pośpiechu i presji.
+          Skupiamy się na tym, aby ciało zaczęło pracować lżej i sprawniej —
+          tak, żeby efekty były odczuwalne również poza sesją:
+          w pracy, podczas spaceru, biegania czy innych form ruchu.
         </Card>
 
-        <Card title="Clear communication" icon="💬">
-          English-first sessions, smooth scheduling, and a professional yet approachable
-          way of working.
+        <Card title="Spokojna komunikacja i zrozumienie ruchu" icon="💬">
+          Tłumaczę jasno i konkretnie, bez motywacyjnego, fitnessowego żargonu.
+          Zależy mi, abyś rozumiał/a, co robimy i po co —
+          dzięki temu łatwiej przenieść efekty treningu na codzienne życie.
         </Card>
       </Row>
 
@@ -52,9 +60,9 @@ export default function AboutMe() {
                 background: "transparent",
                 textAlign: "inherit",
               }}
-              aria-label="Open photo"
+              aria-label="Powiększ zdjęcie"
             >
-              <ImageFrame src={img} alt="Pilates practice photo" />
+              <ImageFrame src={img} alt="Indywidualna sesja Pilates – spokojna praca z ciałem" />
             </button>
           ))}
         </Row>
@@ -62,15 +70,17 @@ export default function AboutMe() {
 
       <div style={{ marginTop: 18 }}>
         <Muted>
-          These photos reflect how I work — focused, calm, and attentive to detail.
-          Sessions take place in clients’ homes or in a downtown studio equipped with a reformer.
+          Te zdjęcia pokazują sposób, w jaki pracuję — spokojnie, precyzyjnie
+          i z dużą uważnością na detale ruchu.
+          Sesje odbywają się w domu klienta lub w kameralnym studio w centrum Warszawy,
+          wyposażonym w reformer.
         </Muted>
       </div>
 
       {activeImage && (
         <Lightbox
           src={activeImage}
-          alt="Pilates practice photo"
+          alt="Sesja Pilates – indywidualna praca nad ruchem"
           onClose={() => setActiveImage(null)}
         />
       )}

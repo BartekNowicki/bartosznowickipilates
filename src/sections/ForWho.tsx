@@ -3,34 +3,49 @@ import { Card, H2, Lead, Row, Section, Muted } from "./_ui";
 export default function ForWho() {
   return (
     <Section tone="light">
-      <H2>Who this is for</H2>
+      <H2>Dla kogo są te zajęcia</H2>
+
       <Lead>
-        If your body feels “off” from travel, long hours at a desk, stress, or inconsistent workouts,
-        private Pilates is a smart, low-friction way to feel strong and mobile again.
+        Jeśli czujesz, że Twoje ciało jest mniej sprawne, obolałe lub przeciążone przez
+        siedzącą pracę, stres, podróże albo nieregularną aktywność,
+        zajęcia indywidualne to spokojny i skuteczny sposób,
+        żeby odzyskać siłę, mobilność i lepsze samopoczucie.
       </Lead>
 
+      <Muted>
+        Dla jednych to realna ulga w bólach i napięciach,
+        dla innych — poprawa siły, wytrzymałości i sprawności,
+        która przekłada się na sport i codzienne funkcjonowanie.
+      </Muted>
+
       <Row>
-        <Card title="Busy professionals" icon="🧑‍💼">
-          You want something that fits your schedule, doesn’t waste time, and actually moves the needle.
+        <Card title="Osoby przytłoczone napiętym grafikiem" icon="🧑‍💼">
+          Chcesz treningu, który szanuje Twój czas,
+          jest konkretny i przynosi realne efekty — bez chaosu i przypadkowych ćwiczeń.
         </Card>
 
-        <Card title="Desk tension & stiffness" icon="💻">
-          Tight hips, stiff upper back, achy neck/shoulders — we build mobility and strength with control.
+        <Card title="Napięcia i sztywność od siedzenia" icon="💻">
+          Sztywne biodra, plecy, kark lub barki?
+          Pracujemy nad mobilnością i siłą w kontrolowany, bezpieczny sposób.
         </Card>
 
-        <Card title="A safe return to training" icon="🧠">
-          If you’ve taken time off or feel unsure, we start calmly, build confidence, and progress step by step.
+        <Card title="Bezpieczny powrót do ruchu" icon="🧠">
+          Jeśli miałeś przerwę w treningach albo czujesz niepewność,
+          zaczynamy spokojnie i budujemy formę krok po kroku.
         </Card>
 
-        <Card title="People who prefer privacy" icon="🏠">
-          No crowded classes. No pressure. Just focused 1:1 coaching in a comfortable environment.
+        <Card title="Osoby ceniące prywatność" icon="🏠">
+          Bez zatłoczonych sal i presji grupy.
+          Skupiona praca 1:1, w komfortowym i spokojnym otoczeniu.
         </Card>
       </Row>
 
       <div style={{ marginTop: 22 }}>
         <Muted>
-          Note: I’m not a medical clinic. If you have an acute injury or red-flag symptoms, I’ll ask you to
-          consult a licensed healthcare professional first. Safety always comes first.
+          Uwaga: nie prowadzę terapii medycznej.
+          W przypadku ostrych urazów lub niepokojących objawów
+          poproszę Cię najpierw o konsultację z lekarzem lub fizjoterapeutą.
+          Bezpieczeństwo stawiam zawsze na pierwszym miejscu.
         </Muted>
       </div>
     </Section>

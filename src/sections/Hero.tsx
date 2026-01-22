@@ -2,7 +2,6 @@ import { ButtonLink, Container, DividerLabel, ImageFrame, Row } from "./_ui";
 import heroImg from "../assets/hero.jpg";
 
 export default function Hero() {
-
   return (
     <section
       style={{
@@ -14,7 +13,8 @@ export default function Hero() {
       <Container>
         <Row gap={28}>
           <div style={{ flex: "1 1 520px", minWidth: 280 }}>
-            <DividerLabel text="Private 1:1 Pilates • Warsaw • I come to you (home or office)" />
+            <DividerLabel text="Indywidualne zajęcia Pilatesu 1:1 • Warszawa • Dojazd do domu lub biura" />
+
             <h1
               style={{
                 fontSize: 46,
@@ -23,48 +23,58 @@ export default function Hero() {
                 letterSpacing: -0.6,
               }}
             >
-              Feel better in your body —
-              without rearranging your life.
+              Poczuj się lepiej w swoim ciele —
+              bez siłowni, bez dojazdów, bez chaosu.
             </h1>
 
-            <p style={{ fontSize: 18, lineHeight: 1.7, maxWidth: 720, margin: "0 0 18px" }}>
-              I offer private, personalized Pilates sessions in Warsaw — at your home or office.
-              If you prefer equipment-based training, we can also work on a reformer in a fully equipped
-              studio downtown.
+            <p
+              style={{
+                fontSize: 18,
+                lineHeight: 1.7,
+                maxWidth: 720,
+                margin: "0 0 18px",
+              }}
+            >
+              Prowadzę prywatne, indywidualne sesje Pilatesu w Warszawie — z dojazdem
+              do Twojego domu lub biura.
+              Jeśli wolisz trening na większym sprzęcie, możemy też pracować na reformerze
+              w w pełni wyposażonym studiu w centrum.
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
               <ButtonLink href="#contact" variant="primary">
-                Book a first session
+                Umów się na pierwszą sesję
               </ButtonLink>
+
               <ButtonLink href="#first-session" variant="accent">
-                What the first session looks like
+                Jak wygląda pierwsza sesja
               </ButtonLink>
             </div>
 
             <div style={{ marginTop: 18, opacity: 0.85, lineHeight: 1.65 }}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                <span>✅ Gentle, progressive approach</span>
-                <span>✅ Clear plan (not random workouts)</span>
-                <span>✅ Great for desk tension & stiffness</span>
-                <span>✅ English-first, expat-friendly</span>
+                <span>✅ Spokojne, progresywne podejście</span>
+                <span>✅ Jasny plan zamiast przypadkowych ćwiczeń</span>
+                <span>✅ Ulga w napięciach od siedzącej pracy</span>
+                <span>✅ Indywidualna praca 1:1</span>
               </div>
             </div>
 
             <div style={{ marginTop: 22, fontSize: 13, opacity: 0.75 }}>
-              Popular with: busy professionals • expats • people who want consistent progress
+              Najczęściej wybierane przez: osoby zapracowane • osoby z bólami i napięciami • osoby chcące wrócić do formy
             </div>
           </div>
 
           <div style={{ flex: "1 1 420px", minWidth: 280 }}>
             <ImageFrame
               src={heroImg}
-              alt="Private Pilates session in a clean, modern setting"
+              alt="Prywatna sesja Pilates w spokojnym, nowoczesnym otoczeniu"
             />
+
             <div style={{ marginTop: 10, display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <DividerLabel text="Home sessions" />
-              <DividerLabel text="Office sessions" />
-              <DividerLabel text="Reformer downtown" />
+              <DividerLabel text="Sesje w domu" />
+              <DividerLabel text="Sesje w biurze" />
+              <DividerLabel text="Reformer w centrum" />
             </div>
           </div>
         </Row>
