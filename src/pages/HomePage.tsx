@@ -16,6 +16,6 @@ export default function HomePage() {
       <FirstSession />
       <AboutMe />
       <CTA />
-    </> <></>
+    </>
   );
 }
