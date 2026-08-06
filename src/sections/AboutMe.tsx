@@ -16,7 +16,7 @@ export default function AboutMe() {
       <Lead>
         Jestem certyfikowanym instruktorem Pilatesu. Pracuję w oparciu o biomechanikę,
         jakość ruchu i spokojne, uważne podejście do ciała.
-        Moim celem jest realna ulga — zmniejszenie napięć, bólu i sztywności,
+        Moim celem jest realna ulga, czyli zmniejszenie napięć, bólu i sztywności,
         szczególnie tych wynikających z siedzącego trybu życia, stresu
         lub jednostronnych obciążeń.
         Jednocześnie pomagam budować stabilność i sprawność, które przekładają się
