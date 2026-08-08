@@ -1,20 +1,20 @@
 import Hero from "../sections/Hero";
-import ForWho from "../sections/ForWho";
-import HowIWork from "../sections/HowIWork";
-import WhereSessions from "../sections/WhereSessions";
-import FirstSession from "../sections/FirstSession";
+import Approach from "../sections/Approach";
 import AboutMe from "../sections/AboutMe";
+import ForWho from "../sections/ForWho";
+import FirstSession from "../sections/FirstSession";
+import WhereSessions from "../sections/WhereSessions";
 import CTA from "../sections/CTA";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <ForWho />
-      <HowIWork />
-      <WhereSessions />
-      <FirstSession />
+      <Approach />
       <AboutMe />
+      <ForWho />
+      <FirstSession />
+      <WhereSessions />
       <CTA />
     </>
   );

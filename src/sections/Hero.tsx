@@ -12,69 +12,107 @@ export default function Hero() {
     >
       <Container>
         <Row gap={28}>
-          <div style={{ flex: "1 1 520px", minWidth: 280 }}>
-            <DividerLabel text="Indywidualne zajęcia Pilatesu 1:1 • Warszawa • Dojazd do domu lub biura" />
+          <div style={{ flex: "1 1 560px", minWidth: 280 }}>
+            <DividerLabel text="Pilates 1:1 • Reformer • Warszawa • Saska Kępa" />
 
             <h1
               style={{
-                fontSize: 46,
+                fontSize: 48,
                 lineHeight: 1.08,
                 margin: "16px 0 12px",
-                letterSpacing: -0.6,
+                letterSpacing: -0.8,
               }}
             >
-              Poczuj się lepiej w swoim ciele —
-              bez siłowni, bez dojazdów, bez chaosu.
+              Pilates 1:1 na reformerze
+              <br />
+              oparty na współczesnej wiedzy o ruchu.
             </h1>
 
             <p
               style={{
                 fontSize: 18,
-                lineHeight: 1.7,
+                lineHeight: 1.75,
                 maxWidth: 720,
                 margin: "0 0 18px",
               }}
             >
-              Prowadzę prywatne, indywidualne sesje Pilatesu w Warszawie — z dojazdem
-              do Twojego domu lub biura.
-              Jeśli wolisz trening na większym sprzęcie, możemy też pracować na reformerze
-              w w pełni wyposażonym studiu w centrum.
+              Zapraszam na indywidualne sesje Pilates 1:1
+              w kameralnym studiu przy ul. Angorskiej 3
+              na Saskiej Kępie.
+              Łączę współczesny Pilates z biomechaniką,
+              treningiem funkcjonalnym oraz aktualną wiedzą
+              o ludzkim ciele, aby każda sesja była
+              dopasowana do Twoich potrzeb i celów.
             </p>
 
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 12,
+                flexWrap: "wrap",
+                marginTop: 18,
+              }}
+            >
               <ButtonLink href="#contact" variant="primary">
-                Umów się na pierwszą sesję
+                Umów pierwszą sesję
               </ButtonLink>
 
               <ButtonLink href="#first-session" variant="accent">
-                Jak wygląda pierwsza sesja
+                Jak wygląda pierwsza sesja?
               </ButtonLink>
             </div>
 
-            <div style={{ marginTop: 18, opacity: 0.85, lineHeight: 1.65 }}>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                <span>✅ Spokojne, progresywne podejście</span>
-                <span>✅ Jasny plan zamiast przypadkowych ćwiczeń</span>
-                <span>✅ Ulga w napięciach od siedzącej pracy</span>
-                <span>✅ Indywidualna praca 1:1</span>
+            <div
+              style={{
+                marginTop: 22,
+                opacity: 0.9,
+                lineHeight: 1.7,
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: 10,
+                }}
+              >
+                <span>✓ Pilates 1:1</span>
+                <span>✓ Reformer i mata</span>
+                <span>✓ Contemporary Pilates</span>
+                <span>✓ Biomechanika i trening funkcjonalny</span>
               </div>
             </div>
 
-            <div style={{ marginTop: 22, fontSize: 13, opacity: 0.75 }}>
-              Najczęściej wybierane przez: osoby zapracowane • osoby z bólami i napięciami • osoby chcące wrócić do formy
+            <div
+              style={{
+                marginTop: 26,
+                fontSize: 16,
+                opacity: 0.75,
+              }}
+            >
+              Dla osób początkujących, aktywnych oraz wszystkich,
+              którzy chcą rozwijać siłę, sprawność i jakość ruchu
+              w spokojnej atmosferze.
             </div>
           </div>
 
           <div style={{ flex: "1 1 420px", minWidth: 280 }}>
             <ImageFrame
               src={heroImg}
-              alt="Prywatna sesja Pilates w spokojnym, nowoczesnym otoczeniu"
+              alt="Indywidualna sesja Pilates 1:1 na reformerze"
             />
 
-            <div style={{ marginTop: 10, display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <DividerLabel text="Sesje w domu" />
-              <DividerLabel text="Sesje w biurze" />
-              <DividerLabel text="Reformer w centrum" />
+            <div
+              style={{
+                marginTop: 10,
+                display: "flex",
+                gap: 10,
+                flexWrap: "wrap",
+              }}
+            >
+              <DividerLabel text="Pilates 1:1" />
+              <DividerLabel text="Reformer" />
+              <DividerLabel text="Saska Kępa" />
             </div>
           </div>
         </Row>

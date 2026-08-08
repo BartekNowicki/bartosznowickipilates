@@ -3,17 +3,25 @@ const colors = {
   burgundySoft: "rgba(122,31,43,0.08)",
   burgundyBorder: "rgba(122,31,43,0.22)",
   burgundyTextSoft: "rgba(122,31,43,0.85)",
-  burgundyHeader: "rgba(168, 70, 86, 0.92)",
+
+  burgundyHeader: "rgba(145, 52, 68, 0.96)",
+
   ctaGreen: "rgba(64, 145, 108, 0.95)",
   ctaGreenBg: "rgba(64, 145, 108, 0.12)",
   ctaGreenBorder: "rgba(64, 145, 108, 0.45)",
+
   cardBg: "rgba(122,31,43,0.02)",
-  ink: "#111",
+
+  ink: "#2d292a",
+  text: "#3f393b",
+  mutedText: "#625a5c",
+
   softBackground: `linear-gradient(
     180deg,
     rgba(122,31,43,0.08),
     rgba(255,255,255,0)
   )`,
+
   cardBgStrong: "rgba(122,31,43,0.055)",
 };
 
@@ -72,14 +80,6 @@ export function Lead({ children }: { children: React.ReactNode }) {
         maxWidth: 820,
       }}
     >
-      {children}
-    </p>
-  );
-}
-
-export function Muted({ children }: { children: React.ReactNode }) {
-  return (
-    <p style={{ margin: 0, opacity: 0.75, lineHeight: 1.6, maxWidth: 850 }}>
       {children}
     </p>
   );

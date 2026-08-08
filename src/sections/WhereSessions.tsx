@@ -5,45 +5,62 @@ import reformer from "../assets/reformer.jpg";
 export default function WhereSessions() {
   return (
     <Section tone="light">
-      <H2>Gdzie odbywają się sesje</H2>
+      <H2>Twoje miejsce na spokojny trening</H2>
 
       <Lead>
-        Najczęściej pracujemy tam, gdzie jest Ci najwygodniej — w Twoim domu, mieszkaniu, lub w biurze na terenie Warszawy.
-        Jeśli zależy Ci na pracy z większym sprzętem, możemy również trenować na reformerze w studio w centrum.
+        Wszystkie sesje odbywają się indywidualnie w kameralnym studiu
+        przy ul. Angorskiej 3 na Saskiej Kępie w Warszawie.
+        To spokojna przestrzeń stworzona do pracy 1:1, wyposażona
+        w reformer, matę oraz sprzęt wykorzystywany podczas współczesnego
+        treningu Pilates.
       </Lead>
 
       <Row gap={18}>
         <div style={{ flex: "1 1 420px", minWidth: 280 }}>
-          <ImageFrame src={equipment} alt="Sesja Pilates w domu klienta" />
+          <ImageFrame
+            src={equipment}
+            alt="Kameralne studio Pilates na Saskiej Kępie"
+          />
         </div>
+
         <div style={{ flex: "1 1 420px", minWidth: 280 }}>
-          <ImageFrame src={reformer} alt="Trening Pilates na reformerze" />
+          <ImageFrame
+            src={reformer}
+            alt="Reformer w studiu Pilates na Saskiej Kępie"
+          />
         </div>
       </Row>
 
-      <div style={{ marginTop: 18 }}>
+      <div style={{ marginTop: 24 }}>
         <Row>
-          <Card title="U Ciebie w domu lub w biurze" icon="🚗">
-            Przyjeżdżam z potrzebnym małym sprzętem. Minimum organizacji, maksimum jakości i skupienia na pracy z ciałem.
+          <Card title="Kameralne studio 1:1" icon="○">
+            Pracujemy bez grup, pośpiechu i presji. Cała przestrzeń oraz moja
+            uwaga są podczas sesji przeznaczone dla Ciebie, dzięki czemu możesz
+            spokojnie skupić się na ruchu i własnych celach.
           </Card>
 
-          <Card title="Opcja z reformerem (centrum)" icon="🏙️">
-            Dobry wybór, jeśli chcesz większej różnorodności ćwiczeń i stopniowego zwiększania oporu sprężyn.
-            Lokalizacja: centrum Warszawy.
+          <Card title="Reformer i mata" icon="○">
+            Korzystamy z reformera oraz maty, dobierając sposób pracy do celu
+            i charakteru danej sesji. Reformer nie jest celem samym w sobie —
+            jest jednym z narzędzi, które pomagają rozwijać siłę, kontrolę
+            ruchu, mobilność i sprawność.
           </Card>
 
-          <Card title="Elastyczne terminy" icon="🗓️">
-            Poranki, godziny w ciągu dnia lub wieczory — w zależności od dostępności.
-            Ustalamy rytm, który będzie dogodny dla obu stron.
+          <Card title="Saska Kępa • Angorska 3" icon="○">
+            Studio znajduje się przy ul. Angorskiej 3 na Saskiej Kępie
+            w Warszawie. To spokojne miejsce, w którym możesz na chwilę
+            odłączyć się od codziennego tempa i skupić wyłącznie na treningu.
           </Card>
         </Row>
       </div>
 
-      <div style={{ marginTop: 18 }}>
-        <Muted>
-          Jeśli nie masz pewności, czy lepsza będzie praca w domu czy na reformerze,
-          wspólnie zdecydujemy po pierwszej sesji.
-        </Muted>
+      <div style={{ marginTop: 28 }}>
+
+          Większość sesji łączy pracę na reformerze i macie, ale nie trzymamy
+          się jednego schematu. To, z jakiego sprzętu korzystamy i jak wygląda
+          trening, zawsze wynika z Twoich celów, możliwości, samopoczucia
+          i tego, czego potrzebujesz danego dnia.
+
       </div>
     </Section>
   );
