@@ -1,4 +1,4 @@
-import { Card, H2, Lead, Row, Section, ImageFrame, Muted } from "./_ui";
+import { Card, H2, Lead, Row, Section, ImageFrame } from "./_ui";
 import equipment from "../assets/equipment.jpg";
 import reformer from "../assets/reformer.jpg";
 

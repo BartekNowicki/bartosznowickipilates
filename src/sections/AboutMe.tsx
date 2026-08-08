@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { H2, Lead, Section, Row, Card, Muted, ImageFrame } from "./_ui";
+import { H2, Lead, Section, Row, Card, ImageFrame } from "./_ui";
 import { Lightbox } from "../components/Lightbox";
 
 import about1 from "../assets/about-1.jpg";

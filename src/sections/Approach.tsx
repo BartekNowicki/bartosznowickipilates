@@ -1,4 +1,4 @@
-import { H2, Lead, Section, Muted } from "./_ui";
+import { H2, Lead, Section } from "./_ui";
 
 export default function Approach() {
   return (

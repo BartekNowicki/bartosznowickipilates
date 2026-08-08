@@ -1,4 +1,4 @@
-import { Section, H2, Lead, Card, Row, Muted, ButtonLink } from "./_ui";
+import { Section, H2, Lead, Card, Row, ButtonLink } from "./_ui";
 
 export default function CTA() {
   const messenger =

@@ -1,4 +1,4 @@
-import { ButtonLink, Card, H2, Lead, Muted, Row, Section } from "./_ui";
+import { ButtonLink, Card, H2, Lead, Row, Section } from "./_ui";
 
 export default function FirstSession() {
   return (

@@ -1,4 +1,4 @@
-import { Card, H2, Lead, Row, Section, Muted } from "./_ui";
+import { Card, H2, Lead, Row, Section } from "./_ui";
 
 export default function ForWho() {
   return (
