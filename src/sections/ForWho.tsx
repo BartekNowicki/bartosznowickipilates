@@ -50,7 +50,7 @@ export default function ForWho() {
         </Card>
       </Row>
 
-      <div style={{ marginTop: 24 }}>
+      <div style={{ marginTop: 24, fontStyle: "italic" }}>
 
           Pilates 1:1 może być zarówno główną formą treningu, jak i
           uzupełnieniem biegania, treningu siłowego czy innych aktywności.

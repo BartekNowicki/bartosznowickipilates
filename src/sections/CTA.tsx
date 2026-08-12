@@ -1,8 +1,7 @@
 import { Section, H2, Lead, Card, Row, ButtonLink } from "./_ui";
 
 export default function CTA() {
-  const messenger =
-    "https://m.me/TWOJA_NAZWA_LUB_ID_STRONY";
+  const messenger = "https://m.me/bartosznowickipilates";
   const email = "bartosznowickihq@gmail.com";
   const phone = "+48 605 769 837";
 

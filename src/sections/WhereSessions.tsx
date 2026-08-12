@@ -1,6 +1,5 @@
 import { Card, H2, Lead, Row, Section, ImageFrame } from "./_ui";
-import equipment from "../assets/equipment.jpg";
-import reformer from "../assets/reformer.jpg";
+import studio from "../assets/studio.jpg";
 
 export default function WhereSessions() {
   return (
@@ -15,21 +14,15 @@ export default function WhereSessions() {
         treningu Pilates.
       </Lead>
 
-      <Row gap={18}>
-        <div style={{ flex: "1 1 420px", minWidth: 280 }}>
-          <ImageFrame
-            src={equipment}
-            alt="Kameralne studio Pilates na Saskiej Kępie"
-          />
-        </div>
+
 
         <div style={{ flex: "1 1 420px", minWidth: 280 }}>
           <ImageFrame
-            src={reformer}
+            src={studio}
             alt="Reformer w studiu Pilates na Saskiej Kępie"
           />
         </div>
-      </Row>
+
 
       <div style={{ marginTop: 24 }}>
         <Row>

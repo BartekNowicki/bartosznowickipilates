@@ -116,7 +116,7 @@ export default function Approach() {
             sesja nastawiona głównie na stretching i rozluźnienie.
           </p>
 
-          <p style={{ fontSize: 18, lineHeight: 1.8, marginBottom: 24 }}>
+          <p style={{ fontSize: 18, lineHeight: 1.8, marginBottom: 64 }}>
             Dzięki temu kolejne spotkania nie muszą wyglądać tak samo.
             Nie ma potrzeby wpadać w rutynę ani powtarzać w kółko jednego
             zestawu ćwiczeń. Trening ma rozwijać ciało, ale powinien też
@@ -124,7 +124,7 @@ export default function Approach() {
           </p>
 
 
-            <strong>
+            <strong style={{ color: "#2e8b57", fontSize: "1.5rem" }}>
               Wierzę, że najlepszy trening to taki, na który chce się wracać.
             </strong>
             <br />

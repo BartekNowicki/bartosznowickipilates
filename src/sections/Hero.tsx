@@ -2,6 +2,14 @@ import { ButtonLink, Container, DividerLabel, ImageFrame, Row } from "./_ui";
 import heroImg from "../assets/hero.jpg";
 
 export default function Hero() {
+
+ const items = [
+   "Pilates 1:1",
+   "Reformer i mata",
+   "Contemporary Pilates",
+   "Biomechanika i trening funkcjonalny",
+ ];
+
   return (
     <section
       style={{
@@ -76,10 +84,13 @@ export default function Hero() {
                   gap: 10,
                 }}
               >
-                <span>✓ Pilates 1:1</span>
-                <span>✓ Reformer i mata</span>
-                <span>✓ Contemporary Pilates</span>
-                <span>✓ Biomechanika i trening funkcjonalny</span>
+                {items.map((item) => (
+                  <span key={item}>
+                    <span style={{ color: "green" }}>✓</span>{" "}
+                    <span style={{ fontStyle: "italic" }}>{item}</span>
+                  </span>
+                ))}
+
               </div>
             </div>
 
