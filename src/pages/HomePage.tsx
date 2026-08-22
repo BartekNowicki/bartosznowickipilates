@@ -4,6 +4,7 @@ import AboutMe from "../sections/AboutMe";
 import ForWho from "../sections/ForWho";
 import FirstSession from "../sections/FirstSession";
 import WhereSessions from "../sections/WhereSessions";
+import Pricing from "../sections/Pricing";
 import CTA from "../sections/CTA";
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
       <ForWho />
       <FirstSession />
       <WhereSessions />
+      <Pricing />
       <CTA />
     </>
   );
