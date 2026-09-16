@@ -6,20 +6,20 @@ export default function Pricing() {
       <H2>Cennik</H2>
 
       <Lead>
-        Pilates 1:1 na reformerze i macie — indywidualna sesja
-        dopasowana do Twoich celów, możliwości i aktualnych potrzeb.
+        Pilates 1:1 na reformerze i macie — indywidualna sesja dopasowana
+        do Twoich celów, możliwości i aktualnych potrzeb.
       </Lead>
 
       <div style={{ maxWidth: 860, marginTop: 34 }}>
         <div
           style={{
             paddingTop: 0,
-            borderTop: "1px solid rgba(0,0,0,0.12)",
+            borderTop: "1px solid rgba(255,255,255,0.2)",
           }}
         >
           <strong
             style={{
-              color: "#2e8b57",
+              color: "#6fd39a",
               fontSize: "2.4rem",
             }}
           >
@@ -28,11 +28,33 @@ export default function Pricing() {
 
           <span
             style={{
-              fontSize: 18,
-              marginLeft: 10,
+              display: "inline-flex",
+              flexDirection: "column",
+              gap: 2,
+              marginLeft: 12,
+              verticalAlign: "middle",
             }}
           >
-            / 60 min
+            <span
+              style={{
+                color: "#ffffff",
+                fontSize: 18,
+                fontWeight: 500,
+              }}
+            >
+              / 60 min
+            </span>
+
+            <span
+              style={{
+                color: "#f2f2f2",
+                fontSize: 13,
+                fontWeight: 600,
+                letterSpacing: "0.02em",
+              }}
+            >
+              cena standardowa
+            </span>
           </span>
 
           <p
@@ -47,6 +69,53 @@ export default function Pricing() {
             na reformerze i macie oraz uwzględniający biomechanikę,
             współczesną wiedzę o ruchu i elementy treningu funkcjonalnego.
           </p>
+
+          <div
+            style={{
+              marginTop: 30,
+              padding: "22px 24px",
+              backgroundColor: "rgba(46, 139, 87, 0.18)",
+              borderLeft: "4px solid #6fd39a",
+              borderRadius: 4,
+            }}
+          >
+            <strong
+              style={{
+                display: "block",
+                color: "#6fd39a",
+                fontSize: 21,
+                marginBottom: 8,
+              }}
+            >
+              Promocja „Aktywny tydzień”
+            </strong>
+
+            <p
+              style={{
+                color: "#ffffff",
+                fontSize: 17,
+                lineHeight: 1.7,
+                margin: 0,
+              }}
+            >
+              Pierwsza zrealizowana sesja w danym tygodniu kosztuje{" "}
+              <strong>195 zł</strong>, a druga zrealizowana sesja w tym
+              samym tygodniu tylko <strong>125 zł za 60 minut</strong>.
+            </p>
+
+            <p
+              style={{
+                color: "#f2f2f2",
+                fontSize: 15,
+                lineHeight: 1.6,
+                marginTop: 10,
+                marginBottom: 0,
+              }}
+            >
+              Promocja obowiązuje do{" "}
+              <strong>31 października 2026 r.</strong>
+            </p>
+          </div>
         </div>
       </div>
     </Section>
