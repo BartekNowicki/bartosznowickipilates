@@ -1,37 +1,47 @@
 const colors = {
-  burgundy: "rgba(122, 31, 43, 1)",
-  burgundySoft: "rgba(122,31,43,0.08)",
-  burgundyBorder: "rgba(122,31,43,0.22)",
-  burgundyTextSoft: "rgba(122,31,43,0.85)",
+  burgundy: "#a83c50",
+  burgundyBright: "#e3a1ad",
+  burgundySoft: "rgba(168, 60, 80, 0.14)",
+  burgundyBorder: "rgba(227, 161, 173, 0.24)",
 
-  burgundyHeader: "rgba(145, 52, 68, 0.96)",
+  ctaGreen: "#72cfa3",
+  ctaGreenBg: "rgba(72, 163, 120, 0.14)",
+  ctaGreenBorder: "rgba(114, 207, 163, 0.46)",
 
-  ctaGreen: "rgba(64, 145, 108, 0.95)",
-  ctaGreenBg: "rgba(64, 145, 108, 0.12)",
-  ctaGreenBorder: "rgba(64, 145, 108, 0.45)",
+  surface: "rgba(255, 255, 255, 0.045)",
+  surfaceStrong: "rgba(255, 255, 255, 0.075)",
+  surfaceBorder: "rgba(255, 255, 255, 0.11)",
 
-  cardBg: "rgba(122,31,43,0.02)",
+  text: "#f7f2f3",
+  mutedText: "rgba(247, 242, 243, 0.74)",
 
-  ink: "#2d292a",
-  text: "#3f393b",
-  mutedText: "#625a5c",
-
-  softBackground: `linear-gradient(
-    180deg,
-    rgba(122,31,43,0.08),
-    rgba(255,255,255,0)
-  )`,
-
-  cardBgStrong: "rgba(122,31,43,0.055)",
+  softBackground: `
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(122, 31, 43, 0.16),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.025),
+      rgba(255, 255, 255, 0)
+    )
+  `,
 };
 
-export function Container({ children }: { children: React.ReactNode }) {
+export function Container({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div
       style={{
-        maxWidth: 1040,
+        width: "100%",
+        maxWidth: 1120,
         margin: "0 auto",
-        padding: "0 20px",
+        padding: "0 clamp(20px, 4vw, 32px)",
+        boxSizing: "border-box",
       }}
     >
       {children}
@@ -52,9 +62,12 @@ export function Section({
     <section
       id={id}
       style={{
-        padding: "84px 0",
-        background: tone === "soft" ? colors.softBackground : "transparent",
-        borderTop: `1px solid ${colors.burgundyBorder}`,
+        position: "relative",
+        padding: "clamp(64px, 8vw, 108px) 0",
+        background:
+          tone === "soft"
+            ? colors.softBackground
+            : "transparent",
       }}
     >
       <Container>{children}</Container>
@@ -62,22 +75,40 @@ export function Section({
   );
 }
 
-export function H2({ children }: { children: React.ReactNode }) {
+export function H2({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <h2 style={{ fontSize: 30, margin: "0 0 14px", letterSpacing: -0.2 }}>
+    <h2
+      style={{
+        maxWidth: 760,
+        margin: "0 0 18px",
+        color: colors.text,
+        fontSize: "clamp(30px, 4vw, 42px)",
+        lineHeight: 1.14,
+        letterSpacing: "-0.025em",
+      }}
+    >
       {children}
     </h2>
   );
 }
 
-export function Lead({ children }: { children: React.ReactNode }) {
+export function Lead({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <p
       style={{
-        fontSize: 18,
-        lineHeight: 1.7,
-        margin: "0 0 18px",
-        maxWidth: 820,
+        maxWidth: 760,
+        margin: "0 0 32px",
+        color: colors.mutedText,
+        fontSize: "clamp(17px, 2vw, 19px)",
+        lineHeight: 1.75,
       }}
     >
       {children}
@@ -87,13 +118,21 @@ export function Lead({ children }: { children: React.ReactNode }) {
 
 export function Row({
   children,
-  gap = 18,
+  gap = 20,
 }: {
   children: React.ReactNode;
   gap?: number;
 }) {
   return (
-    <div style={{ display: "flex", gap, flexWrap: "wrap", alignItems: "stretch" }}>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns:
+          "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
+        gap,
+        alignItems: "stretch",
+      }}
+    >
       {children}
     </div>
   );
@@ -109,42 +148,71 @@ export function Card({
   icon?: string;
 }) {
   return (
-    <div
+    <article
       style={{
-        flex: "1 1 260px",
-        border: `1px solid ${colors.burgundyBorder}`,
-        borderRadius: 16,
-        padding: 18,
-        background: colors.cardBg,
-        backdropFilter: "blur(6px)",
-        boxShadow: "0 12px 32px rgba(0,0,0,0.06)",
+        height: "100%",
+        padding: "clamp(22px, 3vw, 28px)",
+        boxSizing: "border-box",
+        border: `1px solid ${colors.surfaceBorder}`,
+        borderRadius: 22,
+        background: colors.surface,
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        boxShadow: "0 20px 50px rgba(0, 0, 0, 0.18)",
       }}
     >
-      <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 8 }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 13,
+          marginBottom: 14,
+        }}
+      >
         {icon ? (
           <span
-            aria-hidden
+            aria-hidden="true"
             style={{
-              width: 28,
-              height: 28,
+              width: 38,
+              height: 38,
+              flex: "0 0 38px",
               display: "inline-flex",
               alignItems: "center",
               justifyContent: "center",
-              borderRadius: 10,
               border: `1px solid ${colors.burgundyBorder}`,
+              borderRadius: 12,
               background: colors.burgundySoft,
-              color: colors.burgundy,
-              fontSize: 14,
+              color: colors.burgundyBright,
+              fontSize: 17,
             }}
           >
             {icon}
           </span>
         ) : null}
-        <div style={{ fontWeight: 700, color: colors.burgundyHeader }}>{title}</div>
+
+        <h3
+          style={{
+            margin: 0,
+            color: colors.text,
+            fontSize: 19,
+            lineHeight: 1.3,
+            letterSpacing: "-0.01em",
+          }}
+        >
+          {title}
+        </h3>
       </div>
 
-      <div style={{ opacity: 0.9, lineHeight: 1.6 }}>{children}</div>
-    </div>
+      <div
+        style={{
+          color: colors.mutedText,
+          fontSize: 16,
+          lineHeight: 1.7,
+        }}
+      >
+        {children}
+      </div>
+    </article>
   );
 }
 
@@ -162,29 +230,37 @@ export function ButtonLink({
       ? {
           border: `1px solid ${colors.burgundy}`,
           background: colors.burgundy,
-          color: "white",
+          color: "#ffffff",
+          boxShadow: "0 12px 30px rgba(122, 31, 43, 0.28)",
         }
       : variant === "accent"
-      ? {
-          border: `1px solid ${colors.ctaGreenBorder}`,
-          background: colors.ctaGreenBg,
-          color: colors.ctaGreen,
-        }
-      : {
-          border: `1px solid ${colors.burgundyBorder}`,
-          background: "transparent",
-          color: colors.burgundy,
-        };
+        ? {
+            border: `1px solid ${colors.ctaGreenBorder}`,
+            background: colors.ctaGreenBg,
+            color: colors.ctaGreen,
+            boxShadow: "none",
+          }
+        : {
+            border: `1px solid ${colors.surfaceBorder}`,
+            background: colors.surface,
+            color: colors.text,
+            boxShadow: "none",
+          };
 
   return (
     <a
       href={href}
       style={{
-        display: "inline-block",
-        padding: "12px 18px",
-        borderRadius: 12,
+        minHeight: 48,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "0 20px",
+        boxSizing: "border-box",
+        borderRadius: 14,
         textDecoration: "none",
-        fontWeight: 650,
+        fontWeight: 700,
+        lineHeight: 1.2,
         ...styles,
       }}
     >
@@ -193,43 +269,58 @@ export function ButtonLink({
   );
 }
 
-
-export function ImageFrame({ src, alt }: { src: string; alt: string }) {
+export function ImageFrame({
+  src,
+  alt,
+}: {
+  src: string;
+  alt: string;
+}) {
   return (
     <div
       style={{
-        borderRadius: 18,
         overflow: "hidden",
-        border: `1px solid ${colors.burgundyBorder}`,
-        boxShadow: "0 18px 50px rgba(0,0,0,0.10)",
-        background: colors.burgundySoft,
+        border: `1px solid ${colors.surfaceBorder}`,
+        borderRadius: 24,
+        background: colors.surfaceStrong,
+        boxShadow: "0 24px 60px rgba(0, 0, 0, 0.24)",
       }}
     >
       <img
         src={src}
         alt={alt}
         loading="lazy"
-        style={{ width: "100%", height: "auto", display: "block" }}
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+        }}
       />
     </div>
   );
 }
 
-export function DividerLabel({ text }: { text: string }) {
+export function DividerLabel({
+  text,
+}: {
+  text: string;
+}) {
   return (
     <div
       style={{
         display: "inline-flex",
-        gap: 8,
         alignItems: "center",
-        padding: "7px 12px",
-        borderRadius: 999,
+        gap: 8,
+        marginBottom: 18,
+        padding: "7px 13px",
         border: `1px solid ${colors.burgundyBorder}`,
-        background: "rgba(255,255,255,0.8)",
+        borderRadius: 999,
+        background: colors.burgundySoft,
+        color: colors.burgundyBright,
         fontSize: 13,
-        fontWeight: 650,
-        letterSpacing: 0.2,
-        color: colors.burgundy,
+        fontWeight: 700,
+        lineHeight: 1.2,
+        letterSpacing: "0.03em",
       }}
     >
       {text}
