@@ -6,6 +6,7 @@ import FirstSession from "../sections/FirstSession";
 import WhereSessions from "../sections/WhereSessions";
 import Pricing from "../sections/Pricing";
 import CTA from "../sections/CTA";
+import MapSection from "../sections/MapSection";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <WhereSessions />
       <Pricing />
       <CTA />
+      <MapSection />
     </>
   );
 }
