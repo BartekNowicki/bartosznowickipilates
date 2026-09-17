@@ -1,8 +1,52 @@
-import { ButtonLink, Card, H2, Lead, Row, Section } from "./_ui";
+import { ButtonLink, Card, H2, Lead, Section } from "./_ui";
+
+function FaqItem({
+  question,
+  children,
+}: {
+  question: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <details
+      style={{
+        overflow: "hidden",
+        border: "1px solid rgba(255, 255, 255, 0.11)",
+        borderRadius: 18,
+        background: "rgba(255, 255, 255, 0.045)",
+        boxShadow: "0 16px 40px rgba(0, 0, 0, 0.14)",
+      }}
+    >
+      <summary
+        style={{
+          padding: "20px 22px",
+          color: "#f7f2f3",
+          fontSize: 18,
+          fontWeight: 700,
+          lineHeight: 1.4,
+          cursor: "pointer",
+        }}
+      >
+        {question}
+      </summary>
+
+      <div
+        style={{
+          padding: "0 22px 22px",
+          color: "rgba(247, 242, 243, 0.74)",
+          fontSize: 16,
+          lineHeight: 1.75,
+        }}
+      >
+        {children}
+      </div>
+    </details>
+  );
+}
 
 export default function FirstSession() {
   return (
-    <Section id="first-session" tone="soft">
+    <Section id="first-session" tone="light">
       <H2>Jak wygląda pierwsza sesja?</H2>
 
       <Lead>
@@ -12,103 +56,128 @@ export default function FirstSession() {
         i pozwala nam dobrze się poznać.
       </Lead>
 
-      <Row>
-        <Card title="Poznajmy się" icon="○">
-          Rozmawiamy o Twoich celach, dotychczasowej aktywności,
-          stylu życia oraz oczekiwaniach wobec treningu.
-          To pomaga mi przygotować program dopasowany właśnie do Ciebie.
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns:
+            "repeat(auto-fit, minmax(min(100%, 420px), 1fr))",
+          gap: 20,
+          marginTop: 38,
+        }}
+      >
+        <Card title="Poznajmy się" icon="01">
+          <p style={{ margin: 0 }}>
+            Rozmawiamy o Twoich celach, dotychczasowej aktywności,
+            stylu życia oraz oczekiwaniach wobec treningu.
+            To pomaga mi przygotować program dopasowany właśnie do Ciebie.
+          </p>
         </Card>
 
-        <Card title="Pierwsze ćwiczenia" icon="○">
-          Już podczas pierwszego spotkania przechodzimy do praktyki.
-          Pracujemy na reformerze i/lub macie, poznając podstawowe zasady
-          Pilatesu oraz obserwując, jak porusza się Twoje ciało.
+        <Card title="Pierwsze ćwiczenia" icon="02">
+          <p style={{ margin: 0 }}>
+            Już podczas pierwszego spotkania przechodzimy do praktyki.
+            Pracujemy na reformerze i/lub macie, poznając podstawowe zasady
+            Pilatesu oraz obserwując, jak porusza się Twoje ciało.
+          </p>
         </Card>
 
-        <Card title="Trening dopasowany do Ciebie" icon="○">
-          Ćwiczenia dobieram do Twoich możliwości, doświadczenia i
-          samopoczucia. Jeśli w trakcie sesji okaże się, że warto coś
-          zmienić, robimy to od razu.
+        <Card title="Trening dopasowany do Ciebie" icon="03">
+          <p style={{ margin: 0 }}>
+            Ćwiczenia dobieram do Twoich możliwości, doświadczenia i
+            samopoczucia. Jeśli w trakcie sesji okaże się, że warto coś
+            zmienić, robimy to od razu.
+          </p>
         </Card>
 
-        <Card title="Plan dalszej współpracy" icon="○">
-          Na zakończenie wspólnie omawiamy pierwsze wrażenia i ustalamy
-          kierunek dalszej pracy. Tempo rozwoju oraz częstotliwość
-          spotkań zawsze dostosowujemy do Twoich potrzeb.
+        <Card title="Plan dalszej współpracy" icon="04">
+          <p style={{ margin: 0 }}>
+            Na zakończenie wspólnie omawiamy pierwsze wrażenia i ustalamy
+            kierunek dalszej pracy. Tempo rozwoju oraz częstotliwość
+            spotkań zawsze dostosowujemy do Twoich potrzeb.
+          </p>
         </Card>
-      </Row>
+      </div>
 
       <div
         style={{
-          marginTop: 48,
-          paddingTop: 28,
-          borderTop: "1px solid rgba(0,0,0,0.12)",
+          marginTop: "clamp(64px, 8vw, 92px)",
+          paddingTop: "clamp(42px, 6vw, 64px)",
+          borderTop: "1px solid rgba(255, 255, 255, 0.1)",
         }}
       >
         <H2>Często zadawane pytania</H2>
 
-        <div style={{ marginTop: 28, display: "grid", gap: 24 }}>
-          <div>
-            <h3>Czy muszę mieć doświadczenie z Pilatesem?</h3>
+        <div
+          style={{
+            display: "grid",
+            gap: 14,
+            maxWidth: 920,
+            marginTop: 30,
+          }}
+        >
+          <FaqItem question="Czy muszę mieć doświadczenie z Pilatesem?">
+            Nie. Możesz zacząć od podstaw. Tempo pracy zawsze dopasowuję
+            do Twoich możliwości, dlatego wcześniejsze doświadczenie
+            nie jest potrzebne.
+          </FaqItem>
 
-              Nie. Możesz zacząć od podstaw. Tempo pracy zawsze dopasowuję
-              do Twoich możliwości, dlatego wcześniejsze doświadczenie
-              nie jest potrzebne.
+          <FaqItem question="Czy pierwsza sesja jest normalnym treningiem?">
+            Tak. Rozmawiamy, poznajemy Twoje cele, a następnie od razu
+            przechodzimy do ćwiczeń. Dzięki temu mogę lepiej poznać Twój
+            sposób poruszania się i zaplanować kolejne spotkania.
+          </FaqItem>
 
-          </div>
+          <FaqItem question="Czy będę ćwiczyć na reformerze?">
+            Najczęściej tak. Reformer jest jednym z głównych narzędzi,
+            z których korzystam. W zależności od celu sesji możemy również
+            pracować na macie lub łączyć obie formy treningu.
+          </FaqItem>
 
-          <div>
-            <h3>Czy pierwsza sesja jest normalnym treningiem?</h3>
+          <FaqItem question="Jak się przygotować?">
+            Wystarczy wygodny strój, w którym możesz swobodnie się poruszać.
+            Całą resztą zajmiemy się na miejscu.
+          </FaqItem>
 
-              Tak. Rozmawiamy, poznajemy Twoje cele, a następnie od razu
-              przechodzimy do ćwiczeń. Dzięki temu mogę lepiej poznać Twój
-              sposób poruszania się i zaplanować kolejne spotkania.
-
-          </div>
-
-          <div>
-            <h3>Czy będę ćwiczyć na reformerze?</h3>
-
-              Najczęściej tak. Reformer jest jednym z głównych narzędzi,
-              z których korzystam. W zależności od celu sesji możemy również
-              pracować na macie lub łączyć obie formy treningu.
-
-          </div>
-
-          <div>
-            <h3>Jak się przygotować?</h3>
-
-              Wystarczy wygodny strój, w którym możesz swobodnie się poruszać.
-              Całą resztą zajmiemy się na miejscu.
-
-          </div>
-
-          <div>
-            <h3>Czy mogę przyjść tylko na stretching?</h3>
-
-              Oczywiście. Nie każda sesja musi być intensywnym treningiem.
-              Jeśli po wymagającym dniu potrzebujesz przede wszystkim
-              rozluźnienia, mobilności i spokojnej pracy z ciałem,
-              możemy poświęcić całe spotkanie właśnie temu.
-
-          </div>
+          <FaqItem question="Czy mogę przyjść tylko na stretching?">
+            Oczywiście. Nie każda sesja musi być intensywnym treningiem.
+            Jeśli po wymagającym dniu potrzebujesz przede wszystkim
+            rozluźnienia, mobilności i spokojnej pracy z ciałem,
+            możemy poświęcić całe spotkanie właśnie temu.
+          </FaqItem>
         </div>
       </div>
 
       <div
         style={{
-          marginTop: 42,
-          padding: "32px 28px",
-          borderRadius: 18,
-          background: "rgba(0,0,0,0.03)",
+          position: "relative",
+          overflow: "hidden",
+          marginTop: 48,
+          padding: "clamp(30px, 6vw, 54px)",
+          border: "1px solid rgba(227, 161, 173, 0.22)",
+          borderRadius: 28,
+          background: `
+            radial-gradient(
+              circle at 100% 0%,
+              rgba(72, 163, 120, 0.16),
+              transparent 42%
+            ),
+            linear-gradient(
+              135deg,
+              rgba(168, 60, 80, 0.15),
+              rgba(255, 255, 255, 0.045)
+            )
+          `,
+          boxShadow: "0 26px 70px rgba(0, 0, 0, 0.22)",
           textAlign: "center",
         }}
       >
         <h3
           style={{
-            marginTop: 0,
-            marginBottom: 14,
-            fontSize: 28,
+            margin: "0 0 18px",
+            color: "#f7f2f3",
+            fontSize: "clamp(28px, 4vw, 38px)",
+            lineHeight: 1.2,
+            letterSpacing: "-0.025em",
           }}
         >
           Porozmawiajmy
@@ -118,6 +187,7 @@ export default function FirstSession() {
           style={{
             maxWidth: 760,
             margin: "0 auto 24px",
+            color: "rgba(247, 242, 243, 0.76)",
             fontSize: 17,
             lineHeight: 1.8,
           }}
@@ -132,6 +202,7 @@ export default function FirstSession() {
           style={{
             maxWidth: 760,
             margin: "0 auto 24px",
+            color: "rgba(247, 242, 243, 0.76)",
             fontSize: 17,
             lineHeight: 1.8,
           }}
@@ -144,7 +215,8 @@ export default function FirstSession() {
         <p
           style={{
             maxWidth: 760,
-            margin: "0 auto 32px",
+            margin: "0 auto 34px",
+            color: "rgba(247, 242, 243, 0.84)",
             fontSize: 17,
             lineHeight: 1.8,
             fontWeight: 500,

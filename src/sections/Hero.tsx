@@ -1,34 +1,61 @@
-import { ButtonLink, Container, DividerLabel, ImageFrame, Row } from "./_ui";
+import { ButtonLink, Container, DividerLabel, ImageFrame } from "./_ui";
 import heroImg from "../assets/hero.jpg";
 
 export default function Hero() {
-
- const items = [
-   "Pilates 1:1",
-   "Reformer i mata",
-   "Contemporary Pilates",
-   "Biomechanika i trening funkcjonalny",
- ];
+  const items = [
+    "Pilates 1:1",
+    "Reformer i mata",
+    "Contemporary Pilates",
+    "Biomechanika i trening funkcjonalny",
+  ];
 
   return (
     <section
       style={{
-        padding: "86px 0 72px",
-        background:
-          "radial-gradient(900px 500px at 10% 10%, rgba(0,0,0,0.06), transparent 60%), radial-gradient(900px 500px at 80% 20%, rgba(0,0,0,0.05), transparent 60%)",
+        position: "relative",
+        overflow: "hidden",
+        padding: "clamp(72px, 10vw, 124px) 0 clamp(64px, 8vw, 100px)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+        background: `
+          radial-gradient(
+            circle at 8% 15%,
+            rgba(168, 60, 80, 0.2),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at 88% 22%,
+            rgba(72, 163, 120, 0.13),
+            transparent 31%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.025),
+            rgba(255, 255, 255, 0)
+          )
+        `,
       }}
     >
       <Container>
-        <Row gap={28}>
-          <div style={{ flex: "1 1 560px", minWidth: 280 }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(min(100%, 440px), 1fr))",
+            gap: "clamp(42px, 7vw, 80px)",
+            alignItems: "center",
+          }}
+        >
+          <div>
             <DividerLabel text="Pilates 1:1 • Reformer • Warszawa • Saska Kępa" />
 
             <h1
               style={{
-                fontSize: 48,
-                lineHeight: 1.08,
-                margin: "16px 0 12px",
-                letterSpacing: -0.8,
+                maxWidth: 760,
+                margin: "14px 0 20px",
+                color: "#f7f2f3",
+                fontSize: "clamp(44px, 6vw, 68px)",
+                lineHeight: 1.06,
+                letterSpacing: "-0.045em",
               }}
             >
               Pilates 1:1 na reformerze
@@ -38,10 +65,11 @@ export default function Hero() {
 
             <p
               style={{
-                fontSize: 18,
-                lineHeight: 1.75,
-                maxWidth: 720,
-                margin: "0 0 18px",
+                maxWidth: 700,
+                margin: 0,
+                color: "rgba(247, 242, 243, 0.76)",
+                fontSize: "clamp(17px, 2vw, 19px)",
+                lineHeight: 1.78,
               }}
             >
               Zapraszam na indywidualne sesje Pilates 1:1
@@ -56,9 +84,9 @@ export default function Hero() {
             <div
               style={{
                 display: "flex",
-                gap: 12,
                 flexWrap: "wrap",
-                marginTop: 18,
+                gap: 12,
+                marginTop: 28,
               }}
             >
               <ButtonLink href="#contact" variant="primary">
@@ -72,33 +100,53 @@ export default function Hero() {
 
             <div
               style={{
-                marginTop: 22,
-                opacity: 0.9,
-                lineHeight: 1.7,
+                display: "flex",
+                flexWrap: "wrap",
+                gap: 10,
+                marginTop: 28,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 10,
-                }}
-              >
-                {items.map((item) => (
-                  <span key={item}>
-                    <span style={{ color: "green" }}>✓</span>{" "}
-                    <span style={{ fontStyle: "italic" }}>{item}</span>
+              {items.map((item) => (
+                <span
+                  key={item}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    padding: "9px 12px",
+                    border: "1px solid rgba(255, 255, 255, 0.1)",
+                    borderRadius: 999,
+                    background: "rgba(255, 255, 255, 0.04)",
+                    color: "rgba(247, 242, 243, 0.8)",
+                    fontSize: 14,
+                    lineHeight: 1.2,
+                  }}
+                >
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      color: "#72cfa3",
+                      fontSize: 14,
+                      fontWeight: 800,
+                    }}
+                  >
+                    ✓
                   </span>
-                ))}
 
-              </div>
+                  <span style={{ fontStyle: "italic" }}>{item}</span>
+                </span>
+              ))}
             </div>
 
             <div
               style={{
+                maxWidth: 700,
                 marginTop: 26,
+                paddingTop: 22,
+                borderTop: "1px solid rgba(255, 255, 255, 0.09)",
+                color: "rgba(247, 242, 243, 0.62)",
                 fontSize: 16,
-                opacity: 0.75,
+                lineHeight: 1.7,
               }}
             >
               Dla osób początkujących, aktywnych oraz wszystkich,
@@ -107,18 +155,48 @@ export default function Hero() {
             </div>
           </div>
 
-          <div style={{ flex: "1 1 420px", minWidth: 280 }}>
-            <ImageFrame
-              src={heroImg}
-              alt="Indywidualna sesja Pilates 1:1 na reformerze"
+          <div
+            style={{
+              position: "relative",
+            }}
+          >
+            <div
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                inset: "10% -6% -8% 8%",
+                borderRadius: 36,
+                background: `
+                  radial-gradient(
+                    circle at 70% 20%,
+                    rgba(114, 207, 163, 0.2),
+                    transparent 46%
+                  ),
+                  rgba(168, 60, 80, 0.12)
+                `,
+                filter: "blur(34px)",
+              }}
             />
 
             <div
               style={{
-                marginTop: 10,
+                position: "relative",
+                transform: "rotate(0.4deg)",
+              }}
+            >
+              <ImageFrame
+                src={heroImg}
+                alt="Indywidualna sesja Pilates 1:1 na reformerze"
+              />
+            </div>
+
+            <div
+              style={{
+                position: "relative",
                 display: "flex",
-                gap: 10,
                 flexWrap: "wrap",
+                gap: 10,
+                marginTop: 14,
               }}
             >
               <DividerLabel text="Pilates 1:1" />
@@ -126,7 +204,7 @@ export default function Hero() {
               <DividerLabel text="Saska Kępa" />
             </div>
           </div>
-        </Row>
+        </div>
       </Container>
     </section>
   );
