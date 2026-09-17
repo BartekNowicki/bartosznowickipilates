@@ -1,6 +1,6 @@
 import { Card, H2, Lead, Row, Section } from "./_ui";
 
-export default function ForWho() {
+export default function Benefits() {
   return (
     <Section tone="light">
       <H2>Dlaczego warto wybrać trening 1:1?</H2>

@@ -1,7 +1,7 @@
 import Hero from "../sections/Hero";
 import Approach from "../sections/Approach";
 import AboutMe from "../sections/AboutMe";
-import ForWho from "../sections/ForWho";
+import Benefits from "../sections/Benefits";
 import FirstSession from "../sections/FirstSession";
 import WhereSessions from "../sections/WhereSessions";
 import Pricing from "../sections/Pricing";
@@ -13,7 +13,7 @@ export default function HomePage() {
       <Hero />
       <Approach />
       <AboutMe />
-      <ForWho />
+      <Benefits />
       <FirstSession />
       <WhereSessions />
       <Pricing />
