@@ -1,6 +1,7 @@
 import Hero from "../sections/Hero";
 import Approach from "../sections/Approach";
 import AboutMe from "../sections/AboutMe";
+import VideoSection from "../sections/VideoSection";
 import Benefits from "../sections/Benefits";
 import FirstSession from "../sections/FirstSession";
 import WhereSessions from "../sections/WhereSessions";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Hero />
       <Approach />
       <AboutMe />
+      <VideoSection />
       <Benefits />
       <FirstSession />
       <WhereSessions />
